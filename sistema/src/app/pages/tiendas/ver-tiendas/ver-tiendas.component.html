@@ -1,0 +1,51 @@
+<app-navbar></app-navbar>
+<section class="content">
+    <div class="container-fluid">
+        <div class="row m-t-sm">
+            <div class="col-md-15">
+                <div class="panel">
+                    <div class="panel-body">
+                        <div class="col-md-12 col-sm-12" id="form" style="display:block;">
+                            <div class="panel panel-filled">
+                                <div class="panel-body">
+                                    <div class="panel-body">
+                                        <div class="row">
+                                          <div class="col-md-12 col-sm-12">
+                                            <div class="panel panel-filled">
+                                              <div class="panel-body">
+                                                <div class="view-header">
+                                                  <div class="header-icon">
+                                                    <i class="pe page-header-icon pe-7s-map"></i>
+                                                  </div>
+                                                  <div class="header-title">
+                                                    <h3>Detalles de la Tienda</h3>
+                                                  </div>
+                                                </div>
+                                                <div class="tienda-details">
+                                                  <h4>{{ tienda?.nombre }}</h4>
+                                                  <p>Departamento: {{ tienda?.departamento }}</p>
+                                                  <p>Distrito: {{ tienda?.distrito }}</p>
+                                                  <p>Ubicación: Latitud {{ tienda?.latitud }}, Longitud {{ tienda?.longitud }}</p>
+                                                  <!-- Aquí puedes mostrar más detalles de la tienda -->
+                                      
+                                                  <div class="map">
+                                                    <google-map height="50vh" width="100%" [options]="mapOptions" (mapInitialized)="handleMapInitialized($event)">
+                                                    </google-map>
+                                                  </div>
+                                                </div>
+                                              </div>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                      
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+  

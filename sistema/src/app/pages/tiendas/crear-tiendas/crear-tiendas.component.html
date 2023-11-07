@@ -1,0 +1,75 @@
+<app-navbar></app-navbar>
+<section class="content">
+  <div class="container-fluid">
+      <div class="row m-t-sm">
+          <div class="col-md-15">
+              <div class="panel">
+                  <div class="panel-body">
+                      <div class="col-md-12 col-sm-12" id="form" style="display:block;">
+                          <div class="panel panel-filled">
+                              <div class="panel-body">
+                                  <div class="view-header">
+
+                                    <h2>Crear Tienda</h2>
+                                    <form [formGroup]="tiendaForm" (ngSubmit)="crearTienda()">
+                                      <div class="form-group">
+                                        <label>Departamento</label>
+                                        <input type="text" formControlName="departamento" class="form-control" placeholder="Ingresar departamento">
+                                        <div class="text-danger" *ngIf="tiendaForm.get('departamento')?.hasError('required') && tiendaForm.get('departamento')?.touched">
+                                          <span>El departamento es obligatorio</span>
+                                        </div>
+                                      </div>
+                                      <div class="form-group">
+                                        <label>Distrito</label>
+                                        <input type="text" formControlName="distrito" class="form-control" placeholder="Ingresar distrito">
+                                        <div class="text-danger" *ngIf="tiendaForm.get('distrito')?.hasError('required') && tiendaForm.get('distrito')?.touched">
+                                          <span>El distrito es obligatorio</span>
+                                        </div>
+                                      </div>
+                                      <div class="form-group">
+                                        <label>Nombre</label>
+                                        <input type="text" formControlName="nombre" class="form-control" placeholder="Ingresar nombre">
+                                        <div class="text-danger" *ngIf="tiendaForm.get('nombre')?.hasError('required') && tiendaForm.get('nombre')?.touched">
+                                          <span>El nombre es obligatorio</span>
+                                        </div>
+                                      </div>
+                                      <div class="form-group">
+                                        <label>Latitud</label>
+                                        <input type="number" formControlName="latitud" class="form-control" placeholder="Ingresar latitud">
+                                        <div class="text-danger" *ngIf="tiendaForm.get('latitud')?.hasError('required') && tiendaForm.get('latitud')?.touched">
+                                          <span>La latitud es obligatoria</span>
+                                        </div>
+                                      </div>
+                                      <div class="form-group">
+                                        <label>Longitud</label>
+                                        <input type="number" formControlName="longitud" class="form-control" placeholder="Ingresar longitud">
+                                        <div class="text-danger" *ngIf="tiendaForm.get('longitud')?.hasError('required') && tiendaForm.get('longitud')?.touched">
+                                          <span>La longitud es obligatoria</span>
+                                        </div>
+                                      </div>
+                                      <div class="form-group">
+                                        <label>Cantidad</label>
+                                        <input type="number" formControlName="cantidad" class="form-control" placeholder="Ingresar cantidad">
+                                        <div class="text-danger" *ngIf="tiendaForm.get('cantidad')?.hasError('required') && tiendaForm.get('cantidad')?.touched">
+                                          <span>La cantidad es obligatoria</span>
+                                        </div>
+                                      </div>
+                                      <div class="col-sm-12 text-right">
+                                        <div class="panel-body buttons-margin">
+                                          <button type="submit" [disabled]="tiendaForm.invalid" class="btn btn-w-md btn-success">Guardar</button>&nbsp;&nbsp;
+                                          <button class="btn btn-w-md btn-warning" routerLink="/listar-tiendas">Cancelar</button>
+                                        </div>
+                                      </div>
+                                    </form>
+                                  </div>
+                                </div>
+                              </div>
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+</section>
+  

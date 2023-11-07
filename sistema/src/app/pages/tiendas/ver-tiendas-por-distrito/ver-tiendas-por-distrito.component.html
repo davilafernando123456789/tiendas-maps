@@ -1,0 +1,94 @@
+<app-navbar></app-navbar>
+<section class="content">
+    <div class="container-fluid">
+        <div class="row m-t-sm">
+            <div class="col-md-15">
+                <div class="panel">
+                    <div class="panel-body">
+                        <div class="col-md-12 col-sm-12" id="form" style="display:block;">
+                            <div class="panel panel-filled">
+                                <div class="panel-body">
+                                    <div class="panel-body">
+                                        <div class="row">
+                                          <div class="col-md-12 col-sm-12">
+                                            <div class="panel panel-filled">
+                                              <div class="panel-body">
+                                                <div class="view-header">
+                                                  <div class="header-icon">
+                                                    <i class="pe page-header-icon pe-7s-map"></i>
+                                                  </div>
+                                                  <h1>Tiendas en {{ distrito }}</h1>
+
+                                                  <!-- Botones para navegar y acciones en cada tienda -->
+                                                  <!-- <div class="tiendas-list">
+                                                    <div *ngFor="let tienda of tiendas">
+                                                      <div class="tienda-item">
+                                                        <h2>{{ tienda.nombre }}</h2>
+                                                        <p>{{ tienda.distrito }}</p>
+                                                        
+                                                        
+                                                        <div class="acciones">
+                                                            <a [routerLink]="['/ver-tienda', tienda._id]" style="font-size: 25px;" class="pe pe-7s-look text-accent"></a> &nbsp;&nbsp;
+                                                </div>
+                                                      </div>
+                                                    </div>
+                                                  </div> -->
+                                                  <div class="map">
+                                                  <div class="map">
+                                                    <google-map height="50vh" width="100%" [options]="mapOptions" (mapInitialized)="handleMapInitialized($event)">
+                                                    </google-map>
+                                                  </div>
+                                                </div>
+                                            </div>
+                                            
+                                      
+                                                  <div class="col-md-12 col-sm-12" id="form" style="display:block;">
+                                                    <div class="panel panel-filled">
+                                                        <div class="panel-body">
+                                                            <div class="row">
+                                                                <div class="col-sm-12">
+                                                                    <h5 class="m-t-xs">Ubicación de Nuestros Locales - Lima</h5>
+                                                                </div>
+                                                            </div>
+                                                            <div class="table-responsive">
+                                                            <table class="table table-hover table-striped">
+                                                                <thead>
+                                                                <tr>
+                                                                
+                                                                    <th>Distrito</th>
+                                                                    <th>Nombre</th>
+                                                                    <th>Acciones</th>
+                                                                </tr>
+                                                                </thead>
+                                                                <tbody id="datos">
+                                                                <tr *ngFor="let tienda of tiendas">
+                                                                    <td>{{ tienda.departamento }}</td>
+                                                                    <td>{{ tienda.nombre }}</td>
+                                                                    <td>
+                                                                    <a [routerLink]="['/ver-tienda', tienda._id]" style="font-size: 25px;" class="pe pe-7s-look text-accent"></a> &nbsp;&nbsp;                         
+                                                                
+                                                                    </td>
+                                                                </tr>
+                                                                </tbody>
+
+                                                            </table>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                  </div>
+                                            </div>
+</div>
+                                        </div>
+                                      </div>
+                                      
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+</section>
+  
