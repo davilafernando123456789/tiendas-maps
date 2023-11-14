@@ -19,6 +19,7 @@ import { ListarTiendasComponent } from './pages/tiendas/listar-tiendas/listar-ti
 import { VerTiendasComponent } from './pages/tiendas/ver-tiendas/ver-tiendas.component';
 import { CrearTiendasComponent } from './pages/tiendas/crear-tiendas/crear-tiendas.component';
 import { VerTiendasPorDistritoComponent } from './pages/tiendas/ver-tiendas-por-distrito/ver-tiendas-por-distrito.component';
+import { VerProductoComponent } from './pages/productos/ver-producto/ver-producto.component';
 
 
 @NgModule({
@@ -35,7 +36,8 @@ import { VerTiendasPorDistritoComponent } from './pages/tiendas/ver-tiendas-por-
     ListarTiendasComponent,
     VerTiendasComponent,
     CrearTiendasComponent,
-    VerTiendasPorDistritoComponent
+    VerTiendasPorDistritoComponent,
+    VerProductoComponent
   ],
   imports: [
     BrowserModule,

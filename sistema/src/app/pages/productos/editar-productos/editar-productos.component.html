@@ -48,13 +48,17 @@
                                             <span>El precio <strong>es obligatorio</strong></span>
                                         </div>
                                     </div>
-                                    <div  class="col-sm-12 text-right">
+                                    <div class="form-group">
+                                        <label>Imagen</label>
+                                        <input type="file" (change)="onFileChange($event)" class="form-control" accept="image/*" />
+                                      </div>
+                                      <div class="col-sm-12 text-right">
                                         <div class="panel-body buttons-margin">
-                                           <button type="submit" [disabled]="productoForm.invalid" class="btn btn-w-md btn-success">Guardar</button>&nbsp;&nbsp;
-                                           <button class="btn btn-w-md btn-warning" routerLink="/listar-productos">Cancelar</button>
+                                          <button type="submit" [disabled]="productoForm.invalid" class="btn btn-w-md btn-success">Guardar</button>&nbsp;&nbsp;
+                                          <button class="btn btn-w-md btn-warning" routerLink="/listar-productos">Cancelar</button>
                                         </div>
-                                    </div>
-                                </form>
+                                      </div>
+                                    </form>
                             </div>
                         </div>
                     </div>
